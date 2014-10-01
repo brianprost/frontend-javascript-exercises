@@ -3,12 +3,12 @@ module.exports.formLetter = function(firstName, senderName, message) {
 };
 
 module.exports.sliceItAndCombineIt = function(bigString, startA, endA, startB, endB) {
-  // this is where I'm beginning to have trouble
-  return bigString.substring(startA, endA);
+  var bigString = bigString.substring(startA, endA);
+  var bigString = bigString += bigString.substring(startB, endB);
 };
 
 module.exports.findFirstMatch = function(text, searchString) {
-
+  text.indexOf(searchString);
 };
 
 module.exports.findLastMatch = function(text, searchString) {
