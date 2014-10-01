@@ -3,18 +3,24 @@ module.exports.formLetter = function(firstName, senderName, message) {
 };
 
 module.exports.sliceItAndCombineIt = function(bigString, startA, endA, startB, endB) {
-  var bigString = bigString.substring(startA, endA);
-  var bigString = bigString += bigString.substring(startB, endB);
+  var string1 = bigString.substring(startA, endA);
+  var string2 = bigString.substring(startB, endB);
+  return string1 + string2;
 };
 
 module.exports.findFirstMatch = function(text, searchString) {
-  text.indexOf(searchString);
+  var searchTerm = text.indexOf(searchString);
+  return searchTerm;
 };
 
 module.exports.findLastMatch = function(text, searchString) {
-
+  var searchTerm = text.lastIndexOf(searchString);
+  return searchTerm;
 };
 
 module.exports.substringBetweenMatches = function(text, searchString) {
-
+  var toStart = text.indexOf(searchString);
+  var toEnd = text.lastIndexOf(searchString);
+  var result = text.substring(toStart, toEnd);
+  return result;
 };
