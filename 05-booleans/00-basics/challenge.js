@@ -20,10 +20,11 @@ module.exports.inBetween = function(lower, middle, upper) {
 };
 
 module.exports.outsideRanges = function(number) {
-  var testString = (10 < number && number < 20) && (42 <= number && number < 75) && (1 <= number && number <= 6);
+  var testString = (10 > number || number > 20) && (43 > number || number > 75) && (1 >= number || number >= 6);
   return testString;
 };
 
 module.exports.nameAndPrice = function(name, price) {
-
+  var testString = (name == 'NYTimes' || name == 'LATimes') && (price >= 1);
+  return testString;
 };
