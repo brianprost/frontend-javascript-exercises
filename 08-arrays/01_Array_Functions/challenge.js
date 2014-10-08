@@ -14,7 +14,15 @@ module.exports.reversePlusOne = function(array) {
 }
 
 module.exports.plusesEverywhere = function (anArray) {
-  var ThreeStringedArray = array[] // im not done with this part yet
+  var arraySize = anArray.length;
+  if (arraySize < 3) {
+    return anArray[0] + "+" + anArray[1];
+  }
+  else {
+    return anArray[0] + "+" + anArray[1] + "+" + anArray[2] + "+" + anArray[3] + "+" + anArray[4];
+  }
 }
 
-module.exports.arrayQuantityPlusOne = undefined;
+module.exports.arrayQuantityPlusOne = function (arrayOfNums) {
+  return arrayOfNums.length + 1;
+}
