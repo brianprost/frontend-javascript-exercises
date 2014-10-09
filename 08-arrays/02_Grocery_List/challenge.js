@@ -9,10 +9,18 @@ module.exports.addItem = function (arg1, arg2) {
 }
 
 module.exports.reverseSortedList = function (anArray) {
-  // var compareFunction = function () {
-
-  // }
   
-  var newArray = anArray.sort();
-  return newArray.reverse();
+  var newArray = anArray.sort(function (a, b) {
+    if (a > b) {
+      return -1;
+    }
+    else if (a < b) {
+      return 1;
+    }
+    else if (a == b) {
+      return 0;
+    }
+  });
+
+  return newArray;
 }
