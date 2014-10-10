@@ -1,10 +1,3 @@
-var pricingTable = {
-  "Macbook Air": 999,
-  "Macbook Pro": 1299,
-  "Mac Pro": 2499,
-  "Apple Sticker": 1
-}
-
 module.exports.createCourse = function(courseTitle, courseDuration, courseStudents) {
   var courseInfo = {
     title: courseTitle,
